@@ -8,14 +8,22 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
     res.send('hello world')
-    // res.render('test1.html', { 
-    //     name : "hojun!",
-    //     age : 10
-    // });
 });
 
 app.get('/map', (req, res) => {
     fs.readFile('map.html', function(error, data){
+        if (error){
+            console.log(error);
+        }
+        else{
+            res.writeHead(200, {'Content-Type':'text/html'});
+            res.end(data);
+        }
+    });
+});
+
+app.get('/result', (req, res) => {
+    fs.readFile('result.html', function(error, data){
         if (error){
             console.log(error);
         }
