@@ -7,7 +7,15 @@ app.set('view engine', 'html');
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send('hello world')
+    fs.readFile('main.html', function(error, data){
+        if (error){
+            console.log(error);
+        }
+        else{
+            res.writeHead(200, {'Content-Type':'text/html'});
+            res.end(data);
+        }
+    });
 });
 
 app.get('/map', (req, res) => {
@@ -21,6 +29,7 @@ app.get('/map', (req, res) => {
         }
     });
 });
+
 
 app.get('/result', (req, res) => {
     fs.readFile('result.html', function(error, data){
