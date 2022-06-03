@@ -5,15 +5,22 @@ var app = express();
 app.set('view engine', 'html');
 
 app.use(express.json());
+app.use(express.static('image'));
 
-app.get('/', (req, res) => {
+
+
+var http = require('http');
+
+app.get('/main', (req, res) => {
     fs.readFile('main.html', function(error, data){
         if (error){
             console.log(error);
         }
         else{
+            
             res.writeHead(200, {'Content-Type':'text/html'});
             res.end(data);
+           
         }
     });
 });
