@@ -33,7 +33,7 @@
 - Clone the repository
 
 ```bash
-git clone [http://khuhub.khu.ac.kr/2018102160/find-the-center.git](http://khuhub.khu.ac.kr/2018102160/find-the-center.git)
+git clone http://khuhub.khu.ac.kr/2018102160/find-the-center.git
 ```
 
 - Install npm packages
