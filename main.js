@@ -60,6 +60,7 @@ app.use((err, req, res, next) => {
     res.sendStatus(500);
 })
 
+//If you use localhost, comment out line 64 ~ 77 and use line 79.
 try {
     const option = {
       ca: fs.readFileSync('/etc/letsencrypt/live/' + domain +'/fullchain.pem'),
@@ -74,3 +75,5 @@ try {
     console.log('[HTTPS] HTTPS 오류가 발생하였습니다. HTTPS 서버는 실행되지 않습니다.');
     console.log(error);
   }
+
+  //app.listen(8080);
