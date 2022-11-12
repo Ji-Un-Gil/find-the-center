@@ -1,6 +1,5 @@
-[![node-16.15.0](https://img.shields.io/badge/Node-16.15.0-green?logo=nodedotjs)] (https://nodejs.org/ko/)
-[![express-4.18.1](https://img.shields.io/badge/Express-4.18.1-green?logo=express)] (https://expressjs.com/ko/)
-
+[![node-16.15.0](https://img.shields.io/badge/Node-16.15.0-green?logo=nodedotjs)]
+[![express-4.18.1](https://img.shields.io/badge/Express-4.18.1-green?logo=express)]
 # 지도 API를 이용한 중간 지점 찾아주기 서비스(Find the center with kakaomap)
 
 ## About the project
